@@ -1,0 +1,69 @@
+{
+	"name": "AzureSqlTable7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseRetail",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Cod_Producto",
+				"type": "varchar"
+			},
+			{
+				"name": "Cod_Cliente",
+				"type": "varchar"
+			},
+			{
+				"name": "Cod_Territorio",
+				"type": "varchar"
+			},
+			{
+				"name": "NumeroOrden",
+				"type": "varchar"
+			},
+			{
+				"name": "Cantidad",
+				"type": "varchar"
+			},
+			{
+				"name": "PrecioUnitario",
+				"type": "varchar"
+			},
+			{
+				"name": "CostoUnitario",
+				"type": "varchar"
+			},
+			{
+				"name": "Impuesto",
+				"type": "varchar"
+			},
+			{
+				"name": "Flete",
+				"type": "varchar"
+			},
+			{
+				"name": "FechaOrden",
+				"type": "varchar"
+			},
+			{
+				"name": "FechaEnvio",
+				"type": "varchar"
+			},
+			{
+				"name": "FechaVencimiento",
+				"type": "varchar"
+			},
+			{
+				"name": "Cod_Promocion",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VentasInternet"
+		}
+	}
+}
