@@ -1,0 +1,9 @@
+{
+	"name": "datafactorybase1",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "934e10ab-0b86-4e72-83c5-24d241938d91",
+		"tenantId": "50a68648-8a2a-489c-b745-643d4d86d1e3"
+	}
+}
