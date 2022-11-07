@@ -1,0 +1,33 @@
+{
+	"name": "AzureSqlSubCategoria",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "AzureSQLDatasets"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Cod_SubCategoria",
+				"type": "varchar"
+			},
+			{
+				"name": "SubCategoria",
+				"type": "varchar"
+			},
+			{
+				"name": "Cod_Categoria",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SubCategoria"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
