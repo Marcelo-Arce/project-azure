@@ -137,7 +137,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/rodrigoop@frba.utn.edu.ar/Transformaciones"
+					"notebookPath": "/Grupo5/Transformaciones"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
