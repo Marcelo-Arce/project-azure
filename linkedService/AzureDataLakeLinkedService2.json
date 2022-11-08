@@ -1,0 +1,11 @@
+{
+	"name": "AzureDataLakeLinkedService2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://reoptestdatalake.dfs.core.windows.net/"
+		},
+		"annotations": []
+	}
+}

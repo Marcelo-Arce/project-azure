@@ -1,0 +1,9 @@
+{
+	"name": "reopTestDataFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2c1c05a8-8642-42c3-9654-075f4dfd27fe",
+		"tenantId": "a6fe1b1e-97b7-422d-b1bc-e37254398663"
+	}
+}
