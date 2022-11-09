@@ -3,7 +3,7 @@
 	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",
-		"principalId": "b96af728-9c35-4609-bfec-64c432dcb7fc",
+		"principalId": "025da365-6c2b-4730-ab2c-b0fa1bb58823",
 		"tenantId": "a6fe1b1e-97b7-422d-b1bc-e37254398663"
 	}
 }
