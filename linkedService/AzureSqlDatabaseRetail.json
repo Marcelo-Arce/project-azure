@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlDatabaseRetail",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=serverprincipal1.database.windows.net;initial catalog=dbRetail;user id=adminsiglo21",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDkxMDUwMjc3LUI4MzktNEE5MC1BNkU0LUVGNEMzNTE3Qjk2OF81MjA2MjA5Mi0wM2U4LTQyN2QtYWI4ZC1jN2JhMjY1YmUxMzgiDQp9"
+		}
+	}
+}
