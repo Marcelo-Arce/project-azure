@@ -137,7 +137,11 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Grupo5/Transformaciones"
+					"notebookPath": "/Users/rodrigoop@frba.utn.edu.ar/Transformaciones",
+					"baseParameters": {
+						"DataLakeName": "reop123datalake",
+						"DLAccesKey": "QP06hVGstZyiV3p1wyhBkSTQGuf4zbBs23OdxeVl7JrdiTd9l4/AP9e+K0iw0SNZ/XJuXreIt5Gk+AStGSHggg=="
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
@@ -145,6 +149,11 @@
 				}
 			}
 		],
+		"variables": {
+			"NombreDataLake": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2022-11-02T12:36:46Z"
 	},
