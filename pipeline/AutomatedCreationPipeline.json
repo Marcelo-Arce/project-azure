@@ -139,8 +139,18 @@
 				"typeProperties": {
 					"notebookPath": "/Users/rodrigoop@frba.utn.edu.ar/Transformaciones",
 					"baseParameters": {
-						"DataLakeName": "reop123datalake",
-						"DLAccesKey": "QP06hVGstZyiV3p1wyhBkSTQGuf4zbBs23OdxeVl7JrdiTd9l4/AP9e+K0iw0SNZ/XJuXreIt5Gk+AStGSHggg=="
+						"DataLakeName": {
+							"value": "@variables('NombreDataLake')",
+							"type": "Expression"
+						},
+						"DLAccesKey": {
+							"value": "@variables('DataLakeAccesKey')",
+							"type": "Expression"
+						},
+						"DataContainer": {
+							"value": "@variables('datacontainer')",
+							"type": "Expression"
+						}
 					}
 				},
 				"linkedServiceName": {
@@ -152,6 +162,13 @@
 		"variables": {
 			"NombreDataLake": {
 				"type": "String"
+			},
+			"DataLakeAccesKey": {
+				"type": "String"
+			},
+			"datacontainer": {
+				"type": "String",
+				"defaultValue": "datacontainer"
 			}
 		},
 		"annotations": [],
