@@ -150,6 +150,10 @@
 						"DataContainer": {
 							"value": "@variables('datacontainer')",
 							"type": "Expression"
+						},
+						"OutputContainer": {
+							"value": "@variables('outputcontainer')",
+							"type": "Expression"
 						}
 					}
 				},
@@ -169,6 +173,10 @@
 			"datacontainer": {
 				"type": "String",
 				"defaultValue": "datacontainer"
+			},
+			"outputcontainer": {
+				"type": "String",
+				"defaultValue": "outputcontainer"
 			}
 		},
 		"annotations": [],
