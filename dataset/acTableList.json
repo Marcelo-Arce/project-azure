@@ -10,7 +10,11 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Categoria"
+		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
