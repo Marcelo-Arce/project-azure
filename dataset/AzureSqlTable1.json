@@ -16,7 +16,11 @@
 				"name": "Categoria",
 				"type": "varchar"
 			}
-		]
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Categoria"
+		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
