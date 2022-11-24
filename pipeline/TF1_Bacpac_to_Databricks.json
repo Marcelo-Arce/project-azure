@@ -183,9 +183,20 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@contains(activity('Get Metadata').output.value,'dbo.Stock')",
+						"value": "@contains(activity('Get Metadata1').output.childItems,'Categoria.csv')",
 						"type": "Expression"
-					}
+					},
+					"ifTrueActivities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 3
+							}
+						}
+					]
 				}
 			},
 			{
@@ -218,11 +229,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"tabla_stock": {
-				"type": "string"
-			}
-		},
 		"variables": {
 			"NombreDataLake": {
 				"type": "String"
