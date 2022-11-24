@@ -183,7 +183,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@contains(activity('Get Metadata1').output.childItems,'Categoria.csv')",
+						"value": "@contains(activity('Get Metadata1').output.itemName,'Categoria.csv')",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [
@@ -228,7 +228,7 @@
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"childItems"
+						"itemName"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
