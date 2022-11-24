@@ -1,5 +1,5 @@
 {
-	"name": "AutomatedCreationPipeline",
+	"name": "TF1_Bacpac_to_Databricks",
 	"properties": {
 		"activities": [
 			{
