@@ -186,6 +186,17 @@
 						"value": "@contains(activity('Get Metadata1').output.childItems,'Categoria.csv')",
 						"type": "Expression"
 					},
+					"ifFalseActivities": [
+						{
+							"name": "Wait2",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					],
 					"ifTrueActivities": [
 						{
 							"name": "Wait1",
