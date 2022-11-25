@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "CSV_to_JSON",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
