@@ -190,7 +190,7 @@
 							}
 						},
 						{
-							"name": "Notebook2",
+							"name": "Tablas_Intermedias",
 							"type": "DatabricksNotebook",
 							"dependsOn": [
 								{
