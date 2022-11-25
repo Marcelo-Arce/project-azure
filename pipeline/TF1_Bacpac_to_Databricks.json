@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "List Tables",
+				"name": "List Tables in Server",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -33,7 +33,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "List Tables",
+						"activity": "List Tables in Server",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -42,7 +42,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('List Tables').output.value",
+						"value": "@activity('List Tables in Server').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -262,7 +262,7 @@
 				"type": "GetMetadata",
 				"dependsOn": [
 					{
-						"activity": "List Tables",
+						"activity": "List Tables in Server",
 						"dependencyConditions": [
 							"Failed"
 						]
