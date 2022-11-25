@@ -1,0 +1,31 @@
+{
+	"name": "DataLake_outputcontainer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "outputcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Cod_Categoria",
+				"type": "String"
+			},
+			{
+				"name": "Nombre_Categoria",
+				"type": "String"
+			}
+		]
+	}
+}
