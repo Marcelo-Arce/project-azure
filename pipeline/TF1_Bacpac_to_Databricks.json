@@ -144,7 +144,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/rodrigoop@frba.utn.edu.ar/Transformaciones",
+					"notebookPath": "/Transformaciones",
 					"baseParameters": {
 						"DataLakeName": {
 							"value": "@variables('NombreDataLake')",
@@ -195,6 +195,33 @@
 							"typeProperties": {
 								"waitTimeInSeconds": 1
 							}
+						},
+						{
+							"name": "Notebook2",
+							"type": "DatabricksNotebook",
+							"dependsOn": [
+								{
+									"activity": "Wait2",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": "/Creacion tablas intermedias"
+							},
+							"linkedServiceName": {
+								"referenceName": "AzureDatabricks1",
+								"type": "LinkedServiceReference"
+							}
 						}
 					],
 					"ifTrueActivities": [
@@ -233,6 +260,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
