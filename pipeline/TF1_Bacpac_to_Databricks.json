@@ -118,7 +118,7 @@
 				}
 			},
 			{
-				"name": "Notebook1",
+				"name": "Transformaciones_1",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
@@ -228,7 +228,7 @@
 							}
 						},
 						{
-							"name": "Notebook3",
+							"name": "Transformaciones_2",
 							"type": "DatabricksNotebook",
 							"dependsOn": [
 								{
