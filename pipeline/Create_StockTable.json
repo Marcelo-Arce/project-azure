@@ -38,7 +38,7 @@
 				"type": "GetMetadata",
 				"dependsOn": [
 					{
-						"activity": "Transformaciones_1",
+						"activity": "Transformaciones",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -140,7 +140,7 @@
 				}
 			},
 			{
-				"name": "Transformaciones_1",
+				"name": "Transformaciones",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{

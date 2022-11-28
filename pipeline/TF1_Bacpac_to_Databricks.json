@@ -181,26 +181,6 @@
 					},
 					"waitOnCompletion": true
 				}
-			},
-			{
-				"name": "Crear Tabla Stock_copy1",
-				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "Transformaciones_1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "Create_StockTable",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
-				}
 			}
 		],
 		"variables": {
