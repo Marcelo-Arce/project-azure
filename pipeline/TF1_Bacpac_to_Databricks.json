@@ -163,33 +163,6 @@
 				}
 			},
 			{
-				"name": "Tablas_Intermedias1",
-				"type": "DatabricksNotebook",
-				"dependsOn": [
-					{
-						"activity": "ForEachTablas",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Creacion tablas intermedias"
-				},
-				"linkedServiceName": {
-					"referenceName": "AzureDatabricks1",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
 				"name": "Crear Tabla Stock",
 				"type": "ExecutePipeline",
 				"dependsOn": [
@@ -197,6 +170,26 @@
 						"activity": "List Tables in Server",
 						"dependencyConditions": [
 							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Create_StockTable",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Crear Tabla Stock_copy1",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Transformaciones_1",
+						"dependencyConditions": [
+							"Succeeded"
 						]
 					}
 				],
