@@ -1,0 +1,9 @@
+{
+	"name": "reopDaaFactory2",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8a66c978-1664-44e4-b045-197309f8acfe",
+		"tenantId": "50a68648-8a2a-489c-b745-643d4d86d1e3"
+	}
+}
