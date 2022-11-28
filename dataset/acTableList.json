@@ -2,7 +2,7 @@
 	"name": "acTableList",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase1",
+			"referenceName": "AzureSqlDatabases",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
