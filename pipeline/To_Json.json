@@ -41,7 +41,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DataLake_outputcontainer",
+						"referenceName": "DataLake_datacontainer",
 						"type": "DatasetReference"
 					}
 				],
