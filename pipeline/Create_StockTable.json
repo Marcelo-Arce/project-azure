@@ -99,7 +99,7 @@
 							}
 						},
 						{
-							"name": "CSV_to_JSON",
+							"name": "Copy_to_output",
 							"type": "Copy",
 							"dependsOn": [
 								{
