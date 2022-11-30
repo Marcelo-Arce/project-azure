@@ -163,7 +163,7 @@
 				}
 			},
 			{
-				"name": "Crear Tabla Stock",
+				"name": "Pasar_a_JSON",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
@@ -221,7 +221,7 @@
 				}
 			},
 			{
-				"name": "Transformaciones_1_copy1",
+				"name": "Transformaciones",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
@@ -266,11 +266,11 @@
 				}
 			},
 			{
-				"name": "Crear Tabla Stock_copy1",
+				"name": "Pasar_a_JSON1",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Transformaciones_1_copy1",
+						"activity": "Transformaciones",
 						"dependencyConditions": [
 							"Succeeded"
 						]
