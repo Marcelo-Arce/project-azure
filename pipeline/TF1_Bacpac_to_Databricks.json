@@ -176,7 +176,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "Create_StockTable",
+						"referenceName": "Pasar_a_JSON",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -279,7 +279,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "Create_StockTable",
+						"referenceName": "Pasar_a_JSON",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
