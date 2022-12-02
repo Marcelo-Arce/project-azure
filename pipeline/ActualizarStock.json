@@ -94,6 +94,9 @@
 			"nombreContainer": {
 				"type": "string",
 				"defaultValue": "datacontainer"
+			},
+			"filrName": {
+				"type": "string"
 			}
 		},
 		"annotations": [],

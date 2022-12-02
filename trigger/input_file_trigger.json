@@ -1,0 +1,28 @@
+{
+	"name": "input_file_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "ActualizarStock",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"filrName": "@triggerBody.fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/listencontainer/blobs/",
+			"blobPathEndsWith": "input.json",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/5b3af01b-6743-49a6-8e13-b4ad5760cdcb/resourceGroups/Rgrodri_olea/providers/Microsoft.Storage/storageAccounts/reopstorage123",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
