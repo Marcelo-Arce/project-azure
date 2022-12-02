@@ -1,6 +1,10 @@
 {
 	"name": "acTableList",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
 		"folder": {
 			"name": "Auto Creatios"
 		},
