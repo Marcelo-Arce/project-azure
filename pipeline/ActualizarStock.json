@@ -3,7 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Lookup1",
+				"name": "Look_Input_JSON",
+				"description": "Obtiene los valores del JSON que recibe como input durante el trigger",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -33,11 +34,12 @@
 				}
 			},
 			{
-				"name": "Notebook1",
+				"name": "NOTEBOOK_ActualizarStock",
+				"description": "Ejecuta la notebook Actualización_Proveedor_Final en el DataBricks con los datos extraidos en el Lookup",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "Look_Input_JSON",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -52,7 +54,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/rodri_olea@21.edu.ar/Actualización_proveedor_Final",
+					"notebookPath": "/Actualización_proveedor_Final",
 					"baseParameters": {
 						"DataLakeName": {
 							"value": "@pipeline().parameters.nombreDataLake",
@@ -67,11 +69,11 @@
 							"type": "Expression"
 						},
 						"Producto": {
-							"value": "@activity('Lookup1').output.firstRow.Cod_Producto",
+							"value": "@activity('Look_Input_JSON').output.firstRow.Cod_Producto",
 							"type": "Expression"
 						},
 						"Cantidad": {
-							"value": "@activity('Lookup1').output.firstRow.Cantidad",
+							"value": "@activity('Look_Input_JSON').output.firstRow.Cantidad",
 							"type": "Expression"
 						}
 					}
@@ -84,16 +86,14 @@
 		],
 		"parameters": {
 			"nombreDataLake": {
-				"type": "string",
-				"defaultValue": "reopstorage123"
+				"type": "string"
 			},
 			"AccesKeyDataLake": {
 				"type": "string",
 				"defaultValue": "datacontainer"
 			},
 			"nombreContainer": {
-				"type": "string",
-				"defaultValue": "rJ/HxmENE24l7WcZfCtANPG/Z99P8TeQ+F90te8YoBemVFDWKpfXHn0bkdCU38MJiB/HTsGFgSxI+ASt2fUtxQ=="
+				"type": "string"
 			}
 		},
 		"annotations": [],
