@@ -60,7 +60,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Actualización_proveedor_Final",
+					"notebookPath": "/Notebooks/Actualización proveedor",
 					"baseParameters": {
 						"DataLakeName": {
 							"value": "@pipeline().parameters.nombreDataLake",
