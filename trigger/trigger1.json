@@ -15,7 +15,7 @@
 		"typeProperties": {
 			"blobPathBeginsWith": "/prueba/blobs/",
 			"blobPathEndsWith": ".csv",
-			"ignoreEmptyBlobs": true,
+			"ignoreEmptyBlobs": false,
 			"scope": "/subscriptions/4c50839e-3239-4a5e-b764-4eebab316b35/resourceGroups/GrupodeRecursos2/providers/Microsoft.Storage/storageAccounts/grupo2desdepsdatalake",
 			"events": [
 				"Microsoft.Storage.BlobCreated",
