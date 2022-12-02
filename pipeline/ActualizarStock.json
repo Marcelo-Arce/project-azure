@@ -29,7 +29,13 @@
 					},
 					"dataset": {
 						"referenceName": "JSONInput",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"FileName": {
+								"value": "@pipeline().parameters.fileName",
+								"type": "Expression"
+							}
+						}
 					}
 				}
 			},
@@ -95,7 +101,7 @@
 				"type": "string",
 				"defaultValue": "datacontainer"
 			},
-			"filrName": {
+			"fileName": {
 				"type": "string"
 			}
 		},

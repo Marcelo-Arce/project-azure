@@ -5,6 +5,11 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "Actualizar Stock"
 		},
@@ -13,7 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "input.json",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
 				"fileSystem": "listencontainer"
 			}
 		},
