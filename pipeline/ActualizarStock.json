@@ -1,0 +1,103 @@
+{
+	"name": "ActualizarStock",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup1",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "JSONInput",
+						"type": "DatasetReference"
+					}
+				}
+			},
+			{
+				"name": "Notebook1",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/rodri_olea@21.edu.ar/Actualización_proveedor_Final",
+					"baseParameters": {
+						"DataLakeName": {
+							"value": "@pipeline().parameters.nombreDataLake",
+							"type": "Expression"
+						},
+						"DLAccesKey": {
+							"value": "@pipeline().parameters.AccesKeyDataLake",
+							"type": "Expression"
+						},
+						"DataContainer": {
+							"value": "@pipeline().parameters.nombreContainer",
+							"type": "Expression"
+						},
+						"Producto": {
+							"value": "@activity('Lookup1').output.firstRow.Cod_Producto",
+							"type": "Expression"
+						},
+						"Cantidad": {
+							"value": "@activity('Lookup1').output.firstRow.Cantidad",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"nombreDataLake": {
+				"type": "string",
+				"defaultValue": "reopstorage123"
+			},
+			"AccesKeyDataLake": {
+				"type": "string",
+				"defaultValue": "datacontainer"
+			},
+			"nombreContainer": {
+				"type": "string",
+				"defaultValue": "rJ/HxmENE24l7WcZfCtANPG/Z99P8TeQ+F90te8YoBemVFDWKpfXHn0bkdCU38MJiB/HTsGFgSxI+ASt2fUtxQ=="
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-12-02T13:40:48Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

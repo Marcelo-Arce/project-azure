@@ -1,0 +1,9 @@
+{
+	"name": "dataFactoryReop",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "638dda62-6cf9-43a3-899c-404c8ecf53b0",
+		"tenantId": "50a68648-8a2a-489c-b745-643d4d86d1e3"
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"name": "JSONInput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "input.json",
+				"fileSystem": "listencontainer"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Cod_Producto": {
+					"type": "string"
+				},
+				"Cantidad": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
