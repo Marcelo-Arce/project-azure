@@ -34,7 +34,7 @@
 				}
 			},
 			{
-				"name": "NOTEBOOK_ActualizarStock",
+				"name": "NOTEBOOK_Actualizar_Stock",
 				"description": "Ejecuta la notebook Actualización_Proveedor_Final en el DataBricks con los datos extraidos en el Lookup",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
@@ -54,7 +54,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Actualización_proveedor_Final",
+					"notebookPath": "/Users/rodri_olea@21.edu.ar/Actualización_proveedor_Final",
 					"baseParameters": {
 						"DataLakeName": {
 							"value": "@pipeline().parameters.nombreDataLake",
@@ -89,11 +89,11 @@
 				"type": "string"
 			},
 			"AccesKeyDataLake": {
-				"type": "string",
-				"defaultValue": "datacontainer"
+				"type": "string"
 			},
 			"nombreContainer": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "datacontainer"
 			}
 		},
 		"annotations": [],
