@@ -92,10 +92,12 @@
 		],
 		"parameters": {
 			"nombreDataLake": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "tptcgdatalake"
 			},
 			"AccesKeyDataLake": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "2hTFR9MGp8nur/V4qXJVoxFIf+Fom/AOiwwFmKPuIS5O2P8Weo6bCrMtFJSIxAd06v/zb3sLNTQa+AStDI/04g=="
 			},
 			"nombreContainer": {
 				"type": "string",
