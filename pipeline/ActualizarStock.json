@@ -54,7 +54,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/rodri_olea@21.edu.ar/Actualización_proveedor_Final",
+					"notebookPath": "/Actualización_proveedor_Final",
 					"baseParameters": {
 						"DataLakeName": {
 							"value": "@pipeline().parameters.nombreDataLake",
