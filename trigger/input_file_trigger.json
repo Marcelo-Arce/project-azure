@@ -19,10 +19,10 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/listencontainer/blobs/",
+			"blobPathBeginsWith": "/listenercontainer/blobs/",
 			"blobPathEndsWith": "input.json",
 			"ignoreEmptyBlobs": true,
-			"scope": "/subscriptions/5b3af01b-6743-49a6-8e13-b4ad5760cdcb/resourceGroups/Rgrodri_olea/providers/Microsoft.Storage/storageAccounts/reopstorage123",
+			"scope": "/subscriptions/00980f3e-c02c-489d-8637-b0d16da80116/resourceGroups/Rg-tp-deplo-test/providers/Microsoft.Storage/storageAccounts/tptcgdatalake",
 			"events": [
 				"Microsoft.Storage.BlobCreated"
 			]
