@@ -3,20 +3,7 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Stopped",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "ActualizarStock",
-					"type": "PipelineReference"
-				},
-				"parameters": {
-					"nombreDataLake": "tpdatalake",
-					"AccesKeyDataLake": "AccesKey",
-					"nombreContainer": "datacontainer",
-					"fileName": "@triggerBody.fileName"
-				}
-			}
-		],
+		"pipelines": [],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/listenercontainer/blobs/",
