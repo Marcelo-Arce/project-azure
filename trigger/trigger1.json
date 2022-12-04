@@ -1,0 +1,29 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"description": "Reacciona cuando se crea un archivo input.json en el listener container (listenercontainer)",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "ActualizarStock",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"fileName": "@triggerBody().fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/listenercontainer/blobs/",
+			"blobPathEndsWith": "input.json",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/00980f3e-c02c-489d-8637-b0d16da80116/resourceGroups/Rg-tp-deplo-test/providers/Microsoft.Storage/storageAccounts/tptcgdatalake",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
