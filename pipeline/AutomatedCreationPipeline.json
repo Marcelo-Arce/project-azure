@@ -109,6 +109,10 @@
 										"fileName": {
 											"value": "@concat(item().TABLE_NAME,'.csv')",
 											"type": "Expression"
+										},
+										"containerName": {
+											"value": "@pipeline().parameters.dataContainer",
+											"type": "Expression"
 										}
 									}
 								}
@@ -137,22 +141,22 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Transformaciones",
+					"notebookPath": "/Notebooks/TransformacionesV2",
 					"baseParameters": {
 						"DataLakeName": {
-							"value": "@variables('NombreDataLake')",
+							"value": "@pipeline().parameters.NombreDataLake",
 							"type": "Expression"
 						},
 						"DLAccesKey": {
-							"value": "@variables('DataLakeAccesKey')",
+							"value": "@pipeline().parameters.DataLakeAccesKey",
 							"type": "Expression"
 						},
 						"DataContainer": {
-							"value": "@variables('datacontainer')",
+							"value": "@pipeline().parameters.dataContainer",
 							"type": "Expression"
 						},
 						"OutputContainer": {
-							"value": "@variables('outputcontainer')",
+							"value": "@pipeline().parameters.outputcontainer",
 							"type": "Expression"
 						}
 					}
@@ -163,19 +167,19 @@
 				}
 			}
 		],
-		"variables": {
+		"parameters": {
 			"NombreDataLake": {
-				"type": "String"
+				"type": "string"
 			},
 			"DataLakeAccesKey": {
-				"type": "String"
+				"type": "string"
 			},
-			"datacontainer": {
-				"type": "String",
+			"dataContainer": {
+				"type": "string",
 				"defaultValue": "datacontainer"
 			},
 			"outputcontainer": {
-				"type": "String",
+				"type": "string",
 				"defaultValue": "outputcontainer"
 			}
 		},
