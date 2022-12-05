@@ -60,7 +60,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/NoteBook/Actualización_proveedor_Final",
+					"notebookPath": "/Notebooks/Actualización_proveedor_Final",
 					"baseParameters": {
 						"DataLakeName": {
 							"value": "@pipeline().parameters.nombreDataLake",
@@ -93,11 +93,11 @@
 		"parameters": {
 			"nombreDataLake": {
 				"type": "string",
-				"defaultValue": "tptcgdatalake"
+				"defaultValue": "reop22datalake"
 			},
 			"AccesKeyDataLake": {
 				"type": "string",
-				"defaultValue": "2hTFR9MGp8nur/V4qXJVoxFIf+Fom/AOiwwFmKPuIS5O2P8Weo6bCrMtFJSIxAd06v/zb3sLNTQa+AStDI/04g=="
+				"defaultValue": "gPTDdbOT2KxqeFWE7Al/VkAvmUyTZsTAcGDsd1oQZKyH13V/IiqbsnmrB6qB2CgRN9e2tS7IrC/K+AStpe9Y+g=="
 			},
 			"nombreContainer": {
 				"type": "string",
