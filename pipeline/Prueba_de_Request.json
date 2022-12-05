@@ -12,7 +12,7 @@
 				}
 			},
 			{
-				"name": "Transformaciones_1",
+				"name": "Logica_Distribucion",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
