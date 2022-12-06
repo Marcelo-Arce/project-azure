@@ -31,14 +31,7 @@
 			{
 				"name": "ForEachTablas",
 				"type": "ForEach",
-				"dependsOn": [
-					{
-						"activity": "List Tables in Server",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
@@ -88,8 +81,14 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "CheckTablesinDataLake",
-									"type": "DatasetReference"
+									"referenceName": "acGenericCSVTable",
+									"type": "DatasetReference",
+									"parameters": {
+										"fileName": {
+											"value": "@item().TABLE_NAME",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
@@ -105,6 +104,66 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "CopyTable_copy1",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "List Tables in Server",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "CheckTablesinDataLake",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "acTableList",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"variables": {
