@@ -105,6 +105,15 @@
 				}
 			}
 		],
+		"variables": {
+			"contador": {
+				"type": "String",
+				"defaultValue": "1"
+			},
+			"cont_2": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
