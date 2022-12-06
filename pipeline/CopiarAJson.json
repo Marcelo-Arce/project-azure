@@ -3,7 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy to JSON",
+				"description": "Copia todos los archivos CSV del datacontainer a archivos JSON en el JSONcontainer",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -20,6 +21,7 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
