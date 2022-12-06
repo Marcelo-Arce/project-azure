@@ -1,9 +1,12 @@
 {
-	"name": "Json1",
+	"name": "JSONCopies",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Copiar a JSON"
 		},
 		"annotations": [],
 		"type": "Json",
