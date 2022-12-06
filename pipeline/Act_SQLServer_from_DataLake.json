@@ -97,7 +97,11 @@
 							"outputs": [
 								{
 									"referenceName": "acGenericSQLTAble",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"dbName": "@item().TABLE_SCHEMA",
+										"tableName": "@item().TABLE_NAME"
+									}
 								}
 							]
 						}
