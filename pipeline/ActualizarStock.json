@@ -90,7 +90,7 @@
 				}
 			},
 			{
-				"name": "Execute Pipeline1",
+				"name": "Execute Copy to JSON",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
