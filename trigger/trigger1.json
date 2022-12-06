@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "Reacciona cuando se crea un archivo input.json en el listener container (listenercontainer)",
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
