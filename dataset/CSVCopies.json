@@ -1,9 +1,12 @@
 {
-	"name": "DelimitedText1",
+	"name": "CSVCopies",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Copiar a JSON"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
