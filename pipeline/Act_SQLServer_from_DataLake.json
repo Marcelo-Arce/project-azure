@@ -96,7 +96,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "acGenericSQLTAble",
+									"referenceName": "acTableList",
 									"type": "DatasetReference"
 								}
 							]
