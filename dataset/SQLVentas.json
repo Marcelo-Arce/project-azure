@@ -1,0 +1,53 @@
+{
+	"name": "SQLVentas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Actualizar DB"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Categoria",
+				"type": "varchar"
+			},
+			{
+				"name": "Producto",
+				"type": "varchar"
+			},
+			{
+				"name": "Cod_Producto",
+				"type": "varchar"
+			},
+			{
+				"name": "Cod_SubCategoria",
+				"type": "varchar"
+			},
+			{
+				"name": "Cod_Sucursal",
+				"type": "varchar"
+			},
+			{
+				"name": "Cod_Categoria",
+				"type": "varchar"
+			},
+			{
+				"name": "SubCategoria",
+				"type": "varchar"
+			},
+			{
+				"name": "Cantidad",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VentasInternet"
+		}
+	}
+}
