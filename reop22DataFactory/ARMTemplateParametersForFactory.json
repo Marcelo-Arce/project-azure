@@ -15,10 +15,10 @@
 			"value": ""
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
-			"value": "https://reop22datalake.dfs.core.windows.net/"
+			"value": "https://grupo2tpdatalake.dfs.core.windows.net/"
 		},
 		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
-			"value": "1205-144303-oj8yb87i"
+			"value": "1207-115617-s5nh85qk"
 		},
 		"trigger1_properties_ActualizarStock_parameters_fileName": {
 			"value": "@triggerBody().fileName"

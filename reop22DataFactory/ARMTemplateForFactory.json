@@ -21,11 +21,11 @@
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://reop22datalake.dfs.core.windows.net/"
+			"defaultValue": "https://grupo2tpdatalake.dfs.core.windows.net/"
 		},
 		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
 			"type": "string",
-			"defaultValue": "1205-144303-oj8yb87i"
+			"defaultValue": "1207-115617-s5nh85qk"
 		},
 		"trigger1_properties_ActualizarStock_parameters_fileName": {
 			"type": "string",
@@ -1053,7 +1053,7 @@
 				"annotations": [],
 				"type": "AzureDatabricks",
 				"typeProperties": {
-					"domain": "https://adb-8037315990658214.14.azuredatabricks.net",
+					"domain": "https://adb-2939089474650669.9.azuredatabricks.net",
 					"accessToken": {
 						"type": "SecureString",
 						"value": "[parameters('AzureDatabricks1_accessToken')]"
