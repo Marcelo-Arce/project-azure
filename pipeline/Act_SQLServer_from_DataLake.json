@@ -29,7 +29,68 @@
 				}
 			},
 			{
-				"name": "CopyTable_copy1",
+				"name": "Act_Stock-Table",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "List Tables in Server",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "acTableList",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Act_Ventas_Internet",
 				"type": "Copy",
 				"dependsOn": [
 					{
@@ -79,7 +140,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "CheckTablesinDataLake",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				],

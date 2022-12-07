@@ -1,0 +1,56 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Stock.csv",
+				"fileSystem": "datacontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Categoria",
+				"type": "String"
+			},
+			{
+				"name": "Producto",
+				"type": "String"
+			},
+			{
+				"name": "Cod_Producto",
+				"type": "String"
+			},
+			{
+				"name": "Cod_SubCategoria",
+				"type": "String"
+			},
+			{
+				"name": "Cod_Sucursal",
+				"type": "String"
+			},
+			{
+				"name": "Cod_Categoria",
+				"type": "String"
+			},
+			{
+				"name": "SubCategoria",
+				"type": "String"
+			},
+			{
+				"name": "Cantidad",
+				"type": "String"
+			}
+		]
+	}
+}
