@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "Categoria.csv",
-				"fileSystem": "datacontainer"
+				"fileSystem": "container"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
