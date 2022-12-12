@@ -52,25 +52,9 @@
 					},
 					"ifFalseActivities": [
 						{
-							"name": "Wait2",
-							"type": "Wait",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"waitTimeInSeconds": 1
-							}
-						},
-						{
 							"name": "Tablas_Intermedias",
 							"type": "DatabricksNotebook",
-							"dependsOn": [
-								{
-									"activity": "Wait2",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
+							"dependsOn": [],
 							"policy": {
 								"timeout": "0.12:00:00",
 								"retry": 0,
@@ -147,25 +131,9 @@
 					],
 					"ifTrueActivities": [
 						{
-							"name": "Wait1",
-							"type": "Wait",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"waitTimeInSeconds": 3
-							}
-						},
-						{
 							"name": "CSV_to_JSON1",
 							"type": "Copy",
-							"dependsOn": [
-								{
-									"activity": "Wait1",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
+							"dependsOn": [],
 							"policy": {
 								"timeout": "0.12:00:00",
 								"retry": 0,
