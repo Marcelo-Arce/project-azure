@@ -1,5 +1,5 @@
 {
-	"name": "Stock_table",
+	"name": "Ventas_table",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Stock.csv",
+				"fileName": "VentasInternet.csv",
 				"fileSystem": "datacontainer"
 			},
 			"columnDelimiter": ",",
@@ -20,38 +20,61 @@
 		},
 		"schema": [
 			{
-				"name": "Categoria",
-				"type": "String"
-			},
-			{
-				"name": "Producto",
-				"type": "String"
-			},
-			{
 				"name": "Cod_Producto",
 				"type": "String"
 			},
 			{
-				"name": "Cod_SubCategoria",
+				"name": "Cod_Cliente",
 				"type": "String"
 			},
 			{
-				"name": "Cod_Sucursal",
+				"name": "Cod_Territorio",
 				"type": "String"
 			},
 			{
-				"name": "Cod_Categoria",
-				"type": "String"
-			},
-			{
-				"name": "SubCategoria",
+				"name": "NumeroOrden",
 				"type": "String"
 			},
 			{
 				"name": "Cantidad",
 				"type": "String"
+			},
+			{
+				"name": "PrecioUnitario",
+				"type": "String"
+			},
+			{
+				"name": "CostoUnitario",
+				"type": "String"
+			},
+			{
+				"name": "Impuesto",
+				"type": "String"
+			},
+			{
+				"name": "Flete",
+				"type": "String"
+			},
+			{
+				"name": "FechaOrden",
+				"type": "String"
+			},
+			{
+				"name": "FechaEnvio",
+				"type": "String"
+			},
+			{
+				"name": "FechaVencimiento",
+				"type": "String"
+			},
+			{
+				"name": "Cod_Promocion",
+				"type": "String"
+			},
+			{
+				"name": "Cod_Sucursal",
+				"type": "String"
 			}
 		]
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
