@@ -13,10 +13,10 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/prueba/blobs/",
+			"blobPathBeginsWith": "/jsoncontainer/blobs/",
 			"blobPathEndsWith": ".csv",
 			"ignoreEmptyBlobs": false,
-			"scope": "/subscriptions/4c50839e-3239-4a5e-b764-4eebab316b35/resourceGroups/GrupodeRecursos2/providers/Microsoft.Storage/storageAccounts/grupo2desdepsdatalake",
+			"scope": "/subscriptions/9f904b7d-b838-4c66-bc17-ab0242ae5c24/resourceGroups/amTPIam/providers/Microsoft.Storage/storageAccounts/amdatalakeam",
 			"events": [
 				"Microsoft.Storage.BlobCreated",
 				"Microsoft.Storage.BlobDeleted"
