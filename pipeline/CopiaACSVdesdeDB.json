@@ -122,22 +122,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"NombreDataLake": {
-				"type": "string"
-			},
-			"DataLakeAccesKey": {
-				"type": "string"
-			},
-			"dataContainer": {
-				"type": "string",
-				"defaultValue": "datacontainer"
-			},
-			"outputcontainer": {
-				"type": "string",
-				"defaultValue": "outputcontainer"
-			}
-		},
 		"annotations": [],
 		"lastPublishTime": "2022-11-02T12:36:46Z"
 	},

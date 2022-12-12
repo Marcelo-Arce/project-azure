@@ -41,6 +41,20 @@
 				}
 			}
 		],
+		"parameters": {
+			"NombreDataLake": {
+				"type": "string"
+			},
+			"DataLakeAccesKey": {
+				"type": "string"
+			},
+			"dataContainer": {
+				"type": "string"
+			},
+			"outputcontainer": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
