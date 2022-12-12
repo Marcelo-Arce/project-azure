@@ -72,7 +72,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "Datalakedatacontainer",
+						"referenceName": "Datalake_tablecheck",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false

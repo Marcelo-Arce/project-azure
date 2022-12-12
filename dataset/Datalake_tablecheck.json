@@ -1,5 +1,5 @@
 {
-	"name": "Datalakedatacontainer",
+	"name": "Datalake_tablecheck",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",

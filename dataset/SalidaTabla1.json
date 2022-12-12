@@ -2,7 +2,7 @@
 	"name": "SalidaTabla1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorageSalida",
+			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
