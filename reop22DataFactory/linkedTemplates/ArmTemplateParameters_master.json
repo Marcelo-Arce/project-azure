@@ -24,7 +24,7 @@
 			"value": "@triggerBody().fileName"
 		},
 		"trigger1_properties_typeProperties_scope": {
-			"value": "/subscriptions/00980f3e-c02c-489d-8637-b0d16da80116/resourceGroups/Rg-tp-deplo-test/providers/Microsoft.Storage/storageAccounts/tptcgdatalake"
+			"value": "/subscriptions/00980f3e-c02c-489d-8637-b0d16da80116/resourceGroups/Rg-Deploy/providers/Microsoft.Storage/storageAccounts/reop22datalake"
 		},
 		"containerUri": {
 			"value": ""
