@@ -110,10 +110,7 @@
 											"value": "@concat(item().TABLE_NAME,'.csv')",
 											"type": "Expression"
 										},
-										"containerName": {
-											"value": "@pipeline().parameters.dataContainer",
-											"type": "Expression"
-										}
+										"containerName": "datacontainer"
 									}
 								}
 							]
