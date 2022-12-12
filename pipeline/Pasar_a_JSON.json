@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Metadata1",
+				"name": "Ask for Stock",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -38,7 +38,7 @@
 				"type": "IfCondition",
 				"dependsOn": [
 					{
-						"activity": "Get Metadata1",
+						"activity": "Ask for Stock",
 						"dependencyConditions": [
 							"Succeeded"
 						]
