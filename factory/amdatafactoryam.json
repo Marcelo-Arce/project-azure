@@ -1,0 +1,9 @@
+{
+	"name": "amdatafactoryam",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3693bcbc-e1f8-4797-9043-ae847f8dcc64",
+		"tenantId": "35e9cd03-43d0-4947-b582-a6965c4cb674"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"name": "SalidaTabla1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorageSalida",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "salidacontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

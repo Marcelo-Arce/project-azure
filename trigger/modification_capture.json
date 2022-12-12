@@ -1,0 +1,26 @@
+{
+	"name": "modification_capture",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "test",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/container/blobs/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": false,
+			"scope": "/subscriptions/9f904b7d-b838-4c66-bc17-ab0242ae5c24/resourceGroups/amTPIam/providers/Microsoft.Storage/storageAccounts/amdatalakeam",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

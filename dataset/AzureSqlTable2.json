@@ -1,0 +1,51 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "TruckID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ProjectID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "OperatorID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TotalOreMined",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "TotalWasted",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "FactMine"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
