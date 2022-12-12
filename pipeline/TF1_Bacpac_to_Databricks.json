@@ -207,6 +207,7 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -214,7 +215,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "Datalake_tablecheck",
+						"referenceName": "DataLake_datacontainer",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
