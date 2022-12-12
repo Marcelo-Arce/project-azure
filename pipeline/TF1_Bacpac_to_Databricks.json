@@ -183,7 +183,7 @@
 				}
 			},
 			{
-				"name": "List Tables in Data Lake",
+				"name": "Check table in Data Lake",
 				"type": "Lookup",
 				"dependsOn": [
 					{
@@ -225,7 +225,7 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "List Tables in Data Lake",
+						"activity": "Check table in Data Lake",
 						"dependencyConditions": [
 							"Succeeded"
 						]
