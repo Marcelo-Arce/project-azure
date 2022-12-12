@@ -20,7 +20,7 @@
 			"blobPathBeginsWith": "/listenercontainer/blobs/",
 			"blobPathEndsWith": "input.json",
 			"ignoreEmptyBlobs": true,
-			"scope": "/subscriptions/5b3af01b-6743-49a6-8e13-b4ad5760cdcb/resourceGroups/Rgrodri_olea/providers/Microsoft.Storage/storageAccounts/grupo2tpdatalake",
+			"scope": "/subscriptions/00980f3e-c02c-489d-8637-b0d16da80116/resourceGroups/Rg-Deploy/providers/Microsoft.Storage/storageAccounts/reop22datalake",
 			"events": [
 				"Microsoft.Storage.BlobCreated"
 			]
