@@ -1,0 +1,26 @@
+{
+	"name": "datalake_modif",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Prueba_de_Request",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/datacontainer/blobs/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/4c50839e-3239-4a5e-b764-4eebab316b35/resourceGroups/GrupodeRecursos2/providers/Microsoft.Storage/storageAccounts/grupo2desdepsdatalake",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

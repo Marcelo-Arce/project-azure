@@ -1,5 +1,5 @@
 {
-	"name": "DataLake_datacontainer",
+	"name": "Datalakedatacontainer",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -10,20 +10,18 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "Categoria.csv",
 				"fileSystem": "datacontainer"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": [
 			{
-				"name": "Cod_Categoria",
 				"type": "String"
 			},
 			{
-				"name": "Categoria",
 				"type": "String"
 			}
 		]

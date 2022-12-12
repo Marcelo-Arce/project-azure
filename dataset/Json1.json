@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "prueba"
+				"fileSystem": "jsoncontainer"
 			}
 		},
 		"schema": {
@@ -33,5 +33,6 @@
 				}
 			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

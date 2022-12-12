@@ -1,0 +1,24 @@
+{
+	"name": "time_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Act_SQLServer_from_DataLake",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2022-12-12T11:28:00",
+				"timeZone": "Argentina Standard Time"
+			}
+		}
+	}
+}

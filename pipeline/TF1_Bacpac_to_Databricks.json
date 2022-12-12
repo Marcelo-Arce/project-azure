@@ -207,7 +207,6 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -215,7 +214,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "DataLake_datacontainer",
+						"referenceName": "Datalakedatacontainer",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -304,7 +303,7 @@
 			}
 		},
 		"annotations": [],
-		"lastPublishTime": "2022-11-23T14:16:08Z"
+		"lastPublishTime": "2022-12-12T12:26:17Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

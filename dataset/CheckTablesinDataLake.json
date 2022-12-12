@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "container"
+				"fileSystem": "datacontainer"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -24,5 +24,6 @@
 				"type": "String"
 			}
 		]
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

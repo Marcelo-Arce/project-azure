@@ -72,7 +72,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "Datalake_tablecheck",
+						"referenceName": "Datalakedatacontainer",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -85,6 +85,8 @@
 				"defaultValue": "0"
 			}
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2022-12-12T13:43:33Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

@@ -3,7 +3,7 @@
 	"location": "southcentralus",
 	"identity": {
 		"type": "SystemAssigned",
-		"principalId": "9dea7697-fcdc-41ea-9538-eb4de0654323",
+		"principalId": "b253fb77-b8e2-479c-9f66-9948e7653eaa",
 		"tenantId": "35e9cd03-43d0-4947-b582-a6965c4cb674"
 	}
 }

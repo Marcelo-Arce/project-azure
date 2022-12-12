@@ -86,6 +86,63 @@
 								"referenceName": "AzureDatabricks1",
 								"type": "LinkedServiceReference"
 							}
+						},
+						{
+							"name": "CSV_to_JSON2",
+							"type": "Copy",
+							"dependsOn": [
+								{
+									"activity": "Tablas_Intermedias",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"wildcardFileName": "*",
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings",
+										"filePattern": "arrayOfObjects"
+									}
+								},
+								"enableStaging": false
+							},
+							"inputs": [
+								{
+									"referenceName": "DataLake_datacontainer",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "Json1",
+									"type": "DatasetReference"
+								}
+							]
 						}
 					],
 					"ifTrueActivities": [
@@ -99,7 +156,7 @@
 							}
 						},
 						{
-							"name": "Copy_to_output",
+							"name": "CSV_to_JSON1",
 							"type": "Copy",
 							"dependsOn": [
 								{
@@ -131,14 +188,13 @@
 									}
 								},
 								"sink": {
-									"type": "DelimitedTextSink",
+									"type": "JsonSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
-										"type": "DelimitedTextWriteSettings",
-										"quoteAllText": true,
-										"fileExtension": ".txt"
+										"type": "JsonWriteSettings",
+										"filePattern": "arrayOfObjects"
 									}
 								},
 								"enableStaging": false
@@ -151,72 +207,17 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DataLake_outputcontainer",
+									"referenceName": "Json1",
 									"type": "DatasetReference"
 								}
 							]
 						}
 					]
 				}
-			},
-			{
-				"name": "CSV_to_JSON",
-				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "If Condition1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "DelimitedTextSource",
-						"storeSettings": {
-							"type": "AzureBlobFSReadSettings",
-							"recursive": true,
-							"wildcardFileName": "*",
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
-						}
-					},
-					"sink": {
-						"type": "JsonSink",
-						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "JsonWriteSettings",
-							"filePattern": "arrayOfObjects"
-						}
-					},
-					"enableStaging": false
-				},
-				"inputs": [
-					{
-						"referenceName": "DataLake_datacontainer",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "Json1",
-						"type": "DatasetReference"
-					}
-				]
 			}
 		],
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2022-12-12T17:10:38Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

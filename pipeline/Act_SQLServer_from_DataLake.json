@@ -53,18 +53,42 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFileName": "Stock.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "DataLake_datacontainer",
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				]
@@ -111,8 +135,28 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
-				}
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"variables": {
@@ -124,6 +168,8 @@
 				"type": "String"
 			}
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2022-12-12T12:26:16Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }
