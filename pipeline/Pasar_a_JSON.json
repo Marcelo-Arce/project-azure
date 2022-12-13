@@ -47,7 +47,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@contains(string(activity('Get Metadata1').output.childItems),'Stock.csv')",
+						"value": "@contains(string(activity('Ask for Stock Table').output.childItems),'Stock.csv')",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [
